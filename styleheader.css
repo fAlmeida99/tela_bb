@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+.header {
+  height: 90px;
+  background-color: #F8D117;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.header p {
+  margin: 0;
+  padding: 0;
+}
+
+.header p.logo {
+  width: 59px;
+  height: 59px;
+  margin-top: 18px;
+  margin-left: 20%; /* Adiciona espaço entre o logo e o texto */
+  cursor: pointer;
+  order: 1; /* Coloca o logo no início do cabeçalho */
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+}
+
+.header span {
+  font-size: 28px;
+  color: #0a39ab;
+  font-family: arial, sans-serif;
+  margin-top: 1%;
+  text-align: center; /* Centraliza o texto */
+  flex: 1; /* Ocupa o espaço restante */
+  order: 2; /* Coloca o texto "Autoatendimento" no final do cabeçalho */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-right: 25%;
+}
+
+@media screen and (max-width: 500px) {
+  .header p.logo {
+    width: 40px; /* Reduz o tamanho do logo para dispositivos móveis */
+    height: 40px; /* Reduz o tamanho do logo para dispositivos móveis */
+    margin-top: 0; /* Remove a margem superior do logo */
+    margin-right: 10px; /* Adiciona margem entre o logo e o texto */
+  }
+  
+  .header span {
+    font-size: 16px; /* Reduz o tamanho do texto para dispositivos móveis */
+    margin-top: 3%;
+  }
+}
